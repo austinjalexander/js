@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CatClicker</title>
+  <script type="text/javascript">
+    window.onload = function() {
+      var elem1 = document.getElementById('kitty1');
+      var elem2 = document.getElementById('kitty2');
+
+      elem1.addEventListener('click', function() {
+        var count = document.getElementById('count1');
+        count.innerHTML = Number(count.innerHTML) + 1;
+
+      }, false);
+      /*
+        $('#kitty1').click(function(e) {
+          
+        });
+      */
+
+      elem2.addEventListener('click', function() {
+        var count = document.getElementById('count2');
+        count.innerHTML = Number(count.innerHTML) + 1;
+
+      }, false);
+    };
+  </script>
+</head>
+<body>
+  <div style="display:table;">
+    <div style="display:table-row;">
+
+      <div id="div1" style="display:table-cell;">
+        <h1>kitty1</h1>
+        <img id="kitty1" src="kitty1.jpg" />
+        <p>Click count: <span id="count1">0</span></p>
+      </div>
+
+      <div id="div2" style="display:table-cell;">
+        <h1>kitty2</h1>
+        <img id="kitty2" src="kitty2.jpg" />
+        <p>Click count: <span id="count2">0</span></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

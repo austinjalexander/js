@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CatClicker</title>
+  <script type="text/javascript" src="functions2.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+
+      var kitty1_name = 'kitty1';
+      var kitty2_name = 'kitty2';
+
+      var elem1 = document.getElementById('div1');
+      var elem2 = document.getElementById('div2');
+
+      updateKitty(elem1, kitty1_name);
+      updateKitty(elem2, kitty2_name);
+
+    };
+  </script>
+</head>
+<body>
+  <div style="display:table;">
+    <div style="display:table-row;">
+
+      <div id="div1" style="display:table-cell;">
+        <h1></h1>
+        <img id="image1" src="" />
+        <p>Click count: <span id="count1">0</span></p>
+      </div>
+
+      <div id="div2" style="display:table-cell;">
+        <h1></h1>
+        <img id="image2" src="" />
+        <p>Click count: <span id="count2">0</span></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

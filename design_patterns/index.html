@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>CatClicker</title>
+  <script type="text/javascript" src="functions.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+
+      var kitty_names = ['kitty1', 
+                         'kitty2', 
+                         'kitty3', 
+                         'kitty4',
+                         'kitty5'];
+
+      var kitty_list = document.getElementById('kitty_list');
+
+      kitty_clicks = new Object();
+
+      //var kitty_clicks = Array.apply(null, Array(kitty_names.length)).map(Number.prototype.valueOf, 0);
+      
+      kitty_names.forEach(function(kitty_name) {
+        kitty_clicks[kitty_name] = 0;
+        var li = document.createElement('li');
+        li.id = kitty_name;
+        li.innerHTML = kitty_name;
+        kitty_list.appendChild(li);
+
+        makeSelectable(li, kitty_clicks);
+      });
+
+    };
+
+  </script>
+</head>
+<body>
+  <div id="kitty_list_div">
+    <ul id="kitty_list">
+    </ul>
+  </div>
+  <div id="kitty_display" style="display:table-cell;">
+    <h1 id="kitty_name"></h1>
+    <div id="kitty_image">
+      <img src="" />
+    </div>
+    <p>Click count: <span id="count">N/A</span></p>
+  </div>
+
+    </div>
+  </div>
+</body>
+</html>
